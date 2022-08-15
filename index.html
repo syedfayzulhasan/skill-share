@@ -8,6 +8,10 @@
     <title>Skill-Share</title>
     <!-- bootstrap cdn  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/04801ff098.js" crossorigin="anonymous"></script>
+    <!-- vanilla css  -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -57,7 +61,7 @@
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" id="hello">
                         <img src="images/cover/cover-1.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-block">
                             <div class="px-4 py-5 my-5 text-center text-dark">
@@ -67,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="hello">
                         <img src="images/cover/cover-2.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption  d-block">
                             <div class="px-4 py-5 my-5 text-center text-dark">
@@ -77,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="hello">
                         <img src="images/cover/cover-3.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption  d-block">
                             <div class="px-4 py-5 my-5 text-center text-dark">
@@ -109,7 +113,7 @@
             </div>
             <!-- courses card  -->
             <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="card mb-3 col-lg-6">
+                <div class="card mb-3 col-xl-6 col-md-12">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="images/course/course-1.png" class="img-fluid rounded-start" alt="...">
@@ -124,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 col-lg-6">
+                <div class="card mb-3 col-xl-6 col-md-12">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="images/course/course-2.png" class="img-fluid rounded-start" alt="...">
@@ -139,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 col-lg-6">
+                <div class="card mb-3 col-xl-6 col-md-12">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="images/course/course-3.png" class="img-fluid rounded-start" alt="...">
@@ -154,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 col-lg-6">
+                <div class="card mb-3 col-xl-6 col-md-12">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="images/course/course-4.png" class="img-fluid rounded-start" alt="...">
@@ -169,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 col-lg-6">
+                <div class="card mb-3 col-xl-6 col-md-12">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="images/course/course-5.png" class="img-fluid rounded-start" alt="...">
@@ -184,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 Col-lg-6">
+                <div class="card mb-3 Col-xl-6" id="tax">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="images/course/course-6.png" class="img-fluid rounded-start" alt="...">
@@ -200,6 +204,9 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <button class="btn bg-info my-4">View All</button>
+            </div>
         </section>
         <!-- register now  -->
         <section class="container">
@@ -212,7 +219,48 @@
                         </div>
                         <div class="col-lg-3 cta-btn-container text-center
                         pt-4">
-                            <button class="btn  btn-light">Register Now</button>
+                            <button class="btn  btn-light " data-bs-toggle="modal" data-bs-target="#registernowModal"
+                                data-bs-whatever="@mdo">Register Now</button>
+
+                            <!-- register now modal  -->
+
+                            <div class="modal fade" id="registernowModal" tabindex="-1"
+                                aria-labelledby="registernowModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="registernowModalLabel">Register to Skillshare
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Email
+                                                        address</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1"
+                                                        class="form-label">Password</label>
+                                                    <input type="password" class="form-control"
+                                                        id="exampleInputPassword1">
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Check me
+                                                        out</label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Log in</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -294,7 +342,8 @@
                 </div>
             </div>
         </section>
-        <section class="container py-4">
+        <!-- trusted companies  -->
+        <section class="container py-4" id="motab">
             <h1 class="text-center">Trusted by over 800+ companies</h1>
             <div>
                 <img class="me-4" src="images/company/company-1.png" alt="">
@@ -306,8 +355,21 @@
             </div>
         </section>
     </main>
+    <!-- footer  -->
+    <footer id="footer">
+        <div class="container bg-dark text-white text-center p-4">
+            <h4>Skillshare</h4>
+            <p>Office 41, Zawaya Buildin, Ghala Muscat,Oman</p>
+            <p>Privacy policy | terms of use</p>
+            <div>
+                <i class="fa-brands ms-2 fa-facebook"></i>
+                <i class="fa-brands ms-2 fa-square-twitter"></i>
+                <i class="fa-brands ms-2 fa-linkedin"></i>
+                <i class="fa-brands ms-2 fa-tiktok"></i>
+            </div>
+        </div>
+    </footer>
     <!-- courses end  -->
-
     <!-- javascript cdn  -->
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
